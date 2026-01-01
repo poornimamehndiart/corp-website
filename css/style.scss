@@ -1,0 +1,384 @@
+// Variables
+$primary-color: #38471E;
+$primary-light: lighten($primary-color, 60%);
+$text-color: #333333;
+$white: #ffffff;
+$bg-light: #f9fbf7;
+$font-family-main: 'Outfit', sans-serif;
+$font-family-serif: 'Playfair Display', serif;
+
+// Reset & Base Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-main;
+    color: $text-color;
+    background-color: $white;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: $primary-color;
+    font-family: $font-family-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+// Utilities
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.bg-light {
+    background-color: $bg-light;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid transparent;
+    font-family: $font-family-main;
+}
+
+.btn-primary {
+    background-color: $primary-color;
+    color: $white;
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+.btn-contact {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    padding: 8px 24px;
+    &:hover {
+        background-color: $primary-color;
+        color: $white;
+    }
+}
+
+.btn-outline {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background: transparent;
+    &:hover {
+        background: $primary-color;
+        color: $white;
+    }
+}
+
+.btn-sm {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+// Grid System
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+// Header
+#header {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: $font-family-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $primary-color;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 30px;
+        
+        a {
+            color: $text-color;
+            font-weight: 500;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: $primary-color;
+    }
+}
+
+// Hero
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f7f9f5; /* Fallback */
+    position: relative;
+    padding: 0 20px;
+
+    .hero-content {
+        z-index: 2;
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .hero-sub {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        color: lighten($text-color, 20%);
+    }
+}
+
+// Products
+.product-card {
+    background: $white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-img {
+        height: 250px;
+        background-color: $bg-light;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 20px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        color: $primary-color;
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+// Testimonials
+.testimonial-card {
+    background: $white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    text-align: center;
+    
+    .feedback {
+        font-style: italic;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    .customer-name {
+        font-weight: 600;
+        color: $primary-color;
+    }
+}
+
+// Services
+.service-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: $white;
+    border: 1px solid lighten($primary-color, 50%);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: $primary-color;
+        background-color: $bg-light;
+    }
+
+    .icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+}
+
+// Instagram
+.instagram-section {
+    text-align: center;
+    .insta-handle {
+        color: $primary-color;
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+}
+
+.insta-grid {
+    .insta-img {
+        aspect-ratio: 1;
+        background-color: $bg-light;
+        border-radius: 8px;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: opacity 0.3s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+// Footer
+#footer {
+    background-color: $primary-color;
+    color: $white;
+    padding: 60px 0 30px;
+    text-align: center;
+
+    a {
+        color: $white;
+        text-decoration: none; // Added for clarity
+        &:hover {
+            opacity: 0.8;
+            text-decoration: underline; // Added visual cue
+        }
+    }
+
+    .footer-info {
+        margin-bottom: 40px;
+        
+        h3 {
+            color: $white;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+    }
+
+    .copyright {
+        padding-top: 30px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+}
+
+// Responsive
+@media (max-width: 992px) {
+    .grid-4, .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content {
+        .nav-menu {
+            display: none; // Normally we'd do a mobile menu but sticking to simple for now or toggle
+            // Simple toggle implementation logic handled in JS or below:
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: $white;
+            flex-direction: column;
+            padding: 20px;
+            gap: 15px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+            &.active {
+                display: flex;
+            }
+        }
+
+        .mobile-menu-btn {
+            display: block;
+        }
+    }
+
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
