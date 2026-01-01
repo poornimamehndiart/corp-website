@@ -357,57 +357,68 @@ ul {
 
 // Responsive
 @media (max-width: 992px) {
-
-    .grid-4,
-    .grid-3 {
+    .grid-4, .grid-3 {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    #header {
+        .header-content {
+            .btn-contact {
+                display: none; // Hide contact button on mobile
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: $white;
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+                border-top: 1px solid #f0f0f0;
+                text-align: center;
+
+                &.active {
+                    display: flex;
+                }
+            }
+
+            .mobile-menu-btn {
+                display: block; // Show hamburger
+            }
+        }
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
-
-    .header-content {
-        .nav-menu {
-            display: none; // Normally we'd do a mobile menu but sticking to simple for now or toggle
-            // Simple toggle implementation logic handled in JS or below:
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: $white;
-            flex-direction: column;
-            padding: 20px;
-            gap: 15px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-
-            &.active {
-                display: flex;
-            }
-        }
-
-        .mobile-menu-btn {
-            display: block;
-        }
-    }
-
-    .grid-2,
-    .grid-3,
-    .grid-4 {
+    
+    .grid-2, .grid-3, .grid-4 {
         grid-template-columns: 1fr;
     }
 }
 
+// New Components (WhatsApp & Order Button)
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #38471E;
-    color: #fff;
-    font-size: 22px;
-    padding: 14px 16px;
+    background-color: $primary-color;
+    color: $white;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     text-decoration: none;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
