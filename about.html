@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poornima Mehndi Art | Bridal Mehndi Artist in India</title>
+    <meta name="description"
+        content="Poornima Mehndi Art offers professional bridal, festive, and custom mehndi designs in India. Book appointments, buy organic mehndi products, and get PAN India shipping.">
+    <meta name="keywords"
+        content="bridal mehndi artist India, mehndi designer near me, bridal mehndi Rajasthan, wedding mehndi artist, organic mehndi cones, mehndi appointment India">
+    <meta name="author" content="Poornima Mehndi Art">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Poornima Mehndi Art",
+  "image": "https://your-github-username.github.io/your-repo-name/images/hero.jpg",
+  "description": "Professional bridal and custom mehndi artist in India offering wedding, festive, and appointment-based mehndi services.",
+  "telephone": "+91-8209074354",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "priceRange": "₹₹",
+  "sameAs": [
+    "https://www.instagram.com/poornima_mehdni_artist"
+  ]
+}
+</script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-content">
+            <div class="logo">Poornima Mehndi Art</div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="index.html#products">Products</a>
+            </nav>
+            <a href="#footer" class="btn btn-contact">Contact</a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Page Title Section -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h1>About Us</h1>
+            <p style="margin-top: 10px; opacity: 0.7;">Crafting Stories Through Majestic Mehndi Art</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="margin-bottom: 30px; font-size: 2rem;">Welcome to Poornima Mehndi Art</h2>
+
+                <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
+                    Our journey began with a passion for bringing beauty and meaning to every occasion through beautiful
+                    mehndi patterns because we believe that <strong>"Every Design Tells A Story"</strong>.
+                </p>
+
+                <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
+                    At <strong>Poornima Mehndi Art</strong>, we specialize in a wide range of styles, from timeless
+                    bridal henna to contemporary and festive designs. Every stroke is a testament to our commitment to
+                    excellence, precision, and creativity. Whether it’s a wedding, festival, or personal celebration, we
+                    aim to make your moments memorable with our artistic touch.
+                </p>
+
+                <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.8;">
+                    With years of experience and countless satisfied clients, we take pride in transforming your hands
+                    and feet into canvases of stunning art. Let us be part of your story and create designs that tell
+                    your story with elegance and charm!
+                </p>
+
+                <a href="#" class="appointment-btn btn btn-primary">Book Your Session</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Poornima Mehndi Art</h3>
+                <p>Contact: <a href="tel:8209074354">8209074354</a></p>
+                <p>Instagram: <a href="https://instagram.com/poornima_mehndi_artist"
+                        target="_blank">@poornima_mehndi_artist</a></p>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Poornima Mehndi Art. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Use the same script logic for the mobile menu and contact scroll
+
+        // Smooth scroll for Contact button only
+        document.querySelector('.btn-contact').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('#footer').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+    <a href="https://wa.me/918209074354?text=Hello%20Poornima%20Mehndi%20Art,%20I%20would%20like%20to%20book%20a%20mehndi%20appointment."
+        class="whatsapp-float" target="_blank" aria-label="Book Mehndi Appointment on WhatsApp">
+        📞
+    </a>
+
+    <script>
+        // WhatsApp Appointment Logic
+        document.querySelectorAll('.appointment-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const phoneNumber = "918209074354";
+                const message = "Hello Poornima Mehndi Art, I would like to book an appointment.";
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -21,7 +21,10 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     color: $primary-color;
     font-family: $font-family-serif;
 }
@@ -71,6 +74,7 @@ ul {
 .btn-primary {
     background-color: $primary-color;
     color: $white;
+
     &:hover {
         background-color: darken($primary-color, 10%);
     }
@@ -81,6 +85,7 @@ ul {
     border: 2px solid $primary-color;
     color: $primary-color;
     padding: 8px 24px;
+
     &:hover {
         background-color: $primary-color;
         color: $white;
@@ -91,6 +96,7 @@ ul {
     border: 1px solid $primary-color;
     color: $primary-color;
     background: transparent;
+
     &:hover {
         background: $primary-color;
         color: $white;
@@ -127,7 +133,7 @@ ul {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     padding: 15px 0;
 
     .header-content {
@@ -146,10 +152,11 @@ ul {
     .nav-menu {
         display: flex;
         gap: 30px;
-        
+
         a {
             color: $text-color;
             font-weight: 500;
+
             &:hover {
                 color: $primary-color;
             }
@@ -173,7 +180,10 @@ ul {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #f7f9f5; /* Fallback */
+    background: linear-gradient(rgba(247, 249, 245, 0.9), rgba(247, 249, 245, 0.9)), url('../images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    /* Fallback */
     position: relative;
     padding: 0 20px;
 
@@ -200,9 +210,9 @@ ul {
     background: $white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
-    
+
     &:hover {
         transform: translateY(-5px);
     }
@@ -237,9 +247,9 @@ ul {
     background: $white;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     text-align: center;
-    
+
     .feedback {
         font-style: italic;
         font-size: 1.1rem;
@@ -281,6 +291,7 @@ ul {
 // Instagram
 .instagram-section {
     text-align: center;
+
     .insta-handle {
         color: $primary-color;
         margin-bottom: 30px;
@@ -297,6 +308,7 @@ ul {
         cursor: pointer;
         opacity: 0.9;
         transition: opacity 0.3s;
+
         &:hover {
             opacity: 1;
         }
@@ -313,6 +325,7 @@ ul {
     a {
         color: $white;
         text-decoration: none; // Added for clarity
+
         &:hover {
             opacity: 0.8;
             text-decoration: underline; // Added visual cue
@@ -321,7 +334,7 @@ ul {
 
     .footer-info {
         margin-bottom: 40px;
-        
+
         h3 {
             color: $white;
             margin-bottom: 20px;
@@ -336,7 +349,7 @@ ul {
 
     .copyright {
         padding-top: 30px;
-        border-top: 1px solid rgba(255,255,255,0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         font-size: 0.9rem;
         opacity: 0.7;
     }
@@ -344,7 +357,9 @@ ul {
 
 // Responsive
 @media (max-width: 992px) {
-    .grid-4, .grid-3 {
+
+    .grid-4,
+    .grid-3 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -366,7 +381,7 @@ ul {
             flex-direction: column;
             padding: 20px;
             gap: 15px;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
             &.active {
                 display: flex;
@@ -378,7 +393,29 @@ ul {
         }
     }
 
-    .grid-2, .grid-3, .grid-4 {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
         grid-template-columns: 1fr;
     }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #38471E;
+    color: #fff;
+    font-size: 22px;
+    padding: 14px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #2f3b18;
+    transform: scale(1.05);
 }
